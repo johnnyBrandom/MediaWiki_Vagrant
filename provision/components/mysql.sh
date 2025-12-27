@@ -4,8 +4,8 @@ DBHOST=localhost
 #DBNAME=mydb
 #DBUSER=myuser
 #DBPASSWD=password
-DBNAME=librebooking
-DBUSER=lb_user
+DBNAME=mjfrog
+DBUSER=mjf_user
 DBPASSWD=password
 
 apt-get update
@@ -19,7 +19,7 @@ CMD="mysql -uroot -p$DBPASSWD -e"
 
 $CMD "CREATE DATABASE $DBNAME;"
 $CMD "CREATE USER $DBUSER@localhost IDENTIFIED BY '$DBPASSWD';"
-$CMD "GRANT ALL ON $DBNAME.* TO $DBUSER@localhost;"
+$CMD "GRANT ALL PRIVILEGES ON $DBNAME.* TO $DBUSER@localhost WITH GRANT OPTION;"
 $CMD "FLUSH PRIVILEGES;"
 
 sudo sed -i "s/.*bind-address.*/bind-address = 0.0.0.0/" /etc/mysql/mysql.conf.d/mysqld.cnf
