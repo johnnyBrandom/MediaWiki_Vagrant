@@ -4,13 +4,13 @@ apt-get update
 apt-get install -y apache2
 
 # Copy the vhost config file
-cp /var/www/provision/config/apache/vhosts/librebooking.dev.conf /etc/apache2/sites-available/librebooking.dev.conf
+cp /var/www/provision/config/apache/vhosts/mediawiki.dev.conf /etc/apache2/sites-available/mediawiki.dev.conf
 
 # Disable the default vhost file
 a2dissite 000-default
 
 # Enable our custom vhost file
-a2ensite librebooking.dev.conf
+a2ensite mediawiki.dev.conf
 
 # enable rewrite module
 sudo a2enmod rewrite
