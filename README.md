@@ -4,10 +4,11 @@ To use these files, you must install vagrant and [virtualbox](https://www.virtua
 
 A description of the vagrant LAMP stack and link to the original source files can be found here:
 
+```
 OS Release      PHP Version     MYSQL Version
 ----------      -----------     -------------
 18.04           7.2.24          5.7.42
 22.04           8.1.2           8.0.44
-
+```
 
 https://www.ewaldvanderveken.dev/setting-up-a-lamp-development-environment-in-vagrant/ 
