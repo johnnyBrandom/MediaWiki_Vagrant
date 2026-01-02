@@ -9,8 +9,8 @@ This project is also being used as a local environment for migrating a wiki from
 <br>
 ## MediaWiki Upgrade Process
 1. Logon to your MediaWiki server and backup your wiki install:
-   - mysqldump -h localhost -u <user> -p --default-character-set=utf8 <dbname> > backup.sql
-   - tar -czf <mywiki.gz> mywiki
+   - <nowiki>mysqldump -h localhost -u <user> -p --default-character-set=utf9 <dbname> > backup.sql</nowiki>
+   - <nowiki>tar -czf <mywiki.gz> mywiki</nowiki>
 2. git clone this repository to your working directory.
 3. Download the latest MediaWiki .gz file to this directory.
 4. tar -xzf <mediawikiRelease.gz>
@@ -32,14 +32,15 @@ This project is also being used as a local environment for migrating a wiki from
     - https://www.mediawikiwidgets.org/Audio
 15. ssh into the vm (vagrant ssh)
     - Restore your sql database to the newly created wiki database
-      - mysql -u <user> -p <dbname> < backup.sql
+      - <nowiki>mysql -u <user> -p <dbname> < backup.sql</nowiki>
     - Run maintenance/update.php (php update.php or php run.php update)
 16. test wiki with webbrowser.
 
 ```
-OS Release      PHP Version     MYSQL Version
-----------      -----------     -------------
-18.04           7.2.24          5.7.42
-22.04           8.1.2           8.0.44
+OS Release      PHP Version     MYSQL Version   WikiMedia Target
+----------      -----------     -------------   ----------------
+18.04           7.2.24          5.7.42          1.34
+22.04           8.1.2           8.0.44          1.39
+24.04           8.3.6           8.0.44          1.45
 ```
 
