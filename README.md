@@ -9,7 +9,7 @@ This project is also being used as a local environment for migrating a wiki from
 <br>
 ## MediaWiki Upgrade Process
 1. Logon to your MediaWiki server and backup your wiki install:
-   - <nowiki>mysqldump -h localhost -u &ltuser&gt -p --default-character-set=utf9 &ltdbname&gt &gt backup.sql</nowiki>
+   - mysqldump -h localhost -u &ltuser&gt -p --default-character-set=utf9 &ltdbname&gt &gt backup.sql
    - <nowiki>tar -czf <mywiki.gz> mywiki</nowiki>
 2. git clone this repository to your working directory.
 3. Download the latest MediaWiki .gz file to this directory.
