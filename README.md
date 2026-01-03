@@ -9,8 +9,8 @@ This project is also being used as a local environment for migrating a wiki from
 <br>
 ## MediaWiki Upgrade Process
 1. Logon to your MediaWiki server and backup your wiki install:
-   - mysqldump -h localhost -u '<user'> -p --default-character-set=utf9 '<dbname'> > backup.sql
-   - <nowiki>tar -czf <mywiki.gz> mywiki</nowiki>
+   - mysqldump -h localhost -u < user > -p --default-character-set=utf9 < dbname > > backup.sql
+   - tar -czf < mywiki.gz > mywiki
 2. git clone this repository to your working directory.
 3. Download the latest MediaWiki .gz file to this directory.
 4. tar -xzf <mediawikiRelease.gz>
@@ -22,7 +22,7 @@ This project is also being used as a local environment for migrating a wiki from
 8. vagrant up
 9. Navigate webbrowser to the vm IP which should bring up the spalsh page for installing MediaWiki.
    - Go through installation process from webbrowser.
-10. Restore your wiki archive to a local temp folder (e.g. tar -xzf <mywiki.gz>)
+10. Restore your wiki archive to a local temp folder (e.g. tar -xzf < mywiki.gz >)
 11. Use FileMerge to compare your original wiki install root with the fresh install root.
     - Compare the LocalSettings.php files to determine necessary adjustments.
 12. Replace images folder in the new wiki with the old images folder.
@@ -32,8 +32,8 @@ This project is also being used as a local environment for migrating a wiki from
     - https://www.mediawikiwidgets.org/Audio
 15. ssh into the vm (vagrant ssh)
     - Restore your sql database to the newly created wiki database
-      - <nowiki>mysql -u &ltuser&gt -p &ltdbname&gt &lt backup.sql</nowiki>
-    - Run maintenance/update.php (php update.php or php run.php update)
+      - mysql -u < user > -p < dbname > < backup.sql</nowiki>
+    - Run maintenance/update.php (php update.php or php run.php update or ./run update)
 16. test wiki with webbrowser.
 
 ```
