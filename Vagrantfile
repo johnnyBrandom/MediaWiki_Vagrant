@@ -1,8 +1,10 @@
 Vagrant.configure("2") do |config|
-#    config.vm.box = "hashicorp/bionic64"
+# For MediaWiki V1.34 use box ubuntu1804
 #    config.vm.box = "generic/ubuntu1804"
-    config.vm.box = "generic-x64/ubuntu2204"
-
+# For MediaWiki V1.39 use box ubunto2204
+#    config.vm.box = "generic-x64/ubuntu2204"
+# For MediaWiki V1.45 use box ubuntu-24-04
+    config.vm.box = "hashicorp-education/ubuntu-24-04"
 
     config.vm.provider "virtualbox" do |v|
         v.name = "MediaWiki Project"
